@@ -39,8 +39,8 @@ export default [
             buyoffBy: [
               {
                 user: '101557',
-                status: 'Buyoff',
-                message: 'buyoff bom',
+                status: 'Bombuyoff',
+                message: 'buyoff success',
                 date: new Date('2023-03-09T09:48:15.104Z')
               }
             ],
