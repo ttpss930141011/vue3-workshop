@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "npm.packageManager": "yarn",
+  "i18n-ally.localesPaths": [
+    "src/lang"
+  ]
+}

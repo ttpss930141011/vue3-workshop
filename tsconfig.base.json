@@ -1,0 +1,50 @@
+{
+  //設置files為空,則不會自動掃描默認目錄，也就是只會掃描include設定的目錄
+  "files": [],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    //啟用所有嚴格類型檢查選項。
+    //啟用 --strict相當於啟用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
+    "strict": true,
+    // 允許編譯器編譯JS，JSX文件
+    "allowJs": false,
+    // 允許在JS文件中報錯，通常與allowJS一起使用
+    "checkJs": false,
+    // 允許使用jsx
+    "jsx": "preserve",
+    "declaration": true,
+    //移除註解
+    "removeComments": true,
+    //不可以忽略any
+    "noImplicitAny": false,
+    //關閉 this 類型註解提示
+    "noImplicitThis": true,
+    //null/undefined不能作為其他類型的子類型：
+    //let a: number = null; //這裡會報錯.
+    "strictNullChecks": true,
+    //生成枚舉的映射代碼
+    "preserveConstEnums": true,
+    //根目錄
+    //輸出目錄
+    "outDir": "./ts-out-dir",
+    //是否輸出src2.js.map文件
+    "sourceMap": false,
+    //變量定義了但是未使用
+    "noUnusedLocals": false,
+    //是否允許把json文件當做模塊進行解析
+    "resolveJsonModule": true,
+    //和noUnusedLocals一樣，針對func
+    "noUnusedParameters": false,
+    // 模塊解析策略，ts默認用node的解析策略，即相對的方式導入
+    "moduleResolution": "node",
+    //允許export=導出，由import from 導入
+    "esModuleInterop": true,
+    //忽略所有的聲明文件（ *.d.ts）的類型檢查。
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    //指定默認讀取的目錄
+    //"typeRoots": ["./node_modules/@types/", "./types"],
+    "lib": ["ES2018", "DOM"]
+  }
+}
