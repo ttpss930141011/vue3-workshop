@@ -67,7 +67,7 @@ export const settings: SettingsConfig = {
 	 * @description Whether open mock
 	 */
   openProdMock: false,
-  openDevMock: false,
+  openDevMock: true,
   /**
    * @type {string | array} 'dev' | ['prod','test','dev'] according to the .env file props of VITE_APP_ENV
    * @description Need show err logs component.
