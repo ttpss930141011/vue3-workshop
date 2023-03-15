@@ -51,6 +51,7 @@ export interface SettingsConfig {
   errorLog: string | Array<string>
   permissionMode: string
 	openProdMock: boolean,
+	openDevMock:boolean,
   delWindowHeight: string
   tmpToken: string
   showNavbarTitle: boolean

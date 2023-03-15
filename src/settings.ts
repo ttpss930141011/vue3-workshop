@@ -62,7 +62,12 @@ export const settings: SettingsConfig = {
    * @type {string} 'rbac'| 'roles' | 'code'
    */
   permissionMode: 'roles',
-  openProdMock: true,
+	/**
+	 * @type {boolean} 'rbac'| 'roles' | 'code'
+	 * @description Whether open mock
+	 */
+  openProdMock: false,
+  openDevMock: false,
   /**
    * @type {string | array} 'dev' | ['prod','test','dev'] according to the .env file props of VITE_APP_ENV
    * @description Need show err logs component.

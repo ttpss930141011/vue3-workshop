@@ -14,6 +14,7 @@ import { viteMockServe } from 'vite-plugin-mock'
 import setting from './src/settings'
 // import { visualizer } from 'rollup-plugin-visualizer'
 const prodMock = setting.openProdMock
+const devMock = setting.openDevMock
 const pathSrc = resolve(__dirname, 'src')
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '') //獲取環境變量
@@ -73,7 +74,7 @@ export default defineConfig(({ command, mode }) => {
       viteMockServe({
         supportTs: true,
         mockPath: 'mock',
-        localEnabled: command === 'serve',
+        localEnabled: command === 'serve' && devMock,
         prodEnabled: prodMock,
         injectCode: `
           import { setupProdMockServer } from '../mock-prod-server';

@@ -158,7 +158,52 @@ export default [
     method: 'get',
     response: () => {
       return {
-        bomsList: []
+        bomsList: [
+          {
+            _id: '64099084eec7cd29281f7b87',
+            status: 'new',
+            correlation: false,
+            igxlVer: '10.20.01',
+            smartestVer: '',
+            bomchange: [],
+            bomVer: 'v2',
+            createdBy: [
+              {
+                user: '95796',
+                status: 'Newbom',
+                message: 'new bom',
+                date: new Date('2023-03-09T07:53:40.130Z')
+              },
+              {
+                user: '95796',
+                status: 'Renewbom',
+                message: 'renew bom from pass to waiting ',
+                date: new Date('2023-03-09T08:25:07.696Z')
+              }
+            ],
+            updatedBy: [],
+            buyoffBy: [],
+            platform: 'UFLEX',
+            program: 'WS2U-PG660-12B-16_MX21',
+            version: '16',
+            device: 'WP90-PG660-57B',
+            step: 'CP2',
+            sitemap: '2',
+            bomNo: 'PRS-888888888',
+            owner: '95796',
+            customer: '0000453',
+            productionline: 'Probe',
+            plant: 'T6',
+            lotType: 'ProductionLot',
+            targetDevice: 'WP90-PG660-57B',
+            source: 'WB90-PG660-57B',
+            family: 'BEAMER2.0',
+            stage: 'CP',
+            bomMd5: '0c774eab30a105eb5c166e353d8470ee',
+            createdAt: new Date('2023-03-09T07:53:40.150Z'),
+            updatedAt: new Date('2023-03-09T08:25:07.704Z')
+          }
+        ]
       }
     }
   }

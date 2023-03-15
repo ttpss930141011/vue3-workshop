@@ -180,7 +180,7 @@ import editDialog from './components/editDialog.vue'
 import timelineDialog from './components/timelineDialog.vue'
 import type { RowData } from '~/home'
 import settings from '@/settings'
-// import { getBomlistReq } from '@/api/bom'
+import { getBomlistReq } from '@/api/bom'
 import { getDateDiff } from '@/utils/common-util'
 
 const { t } = useI18n()
@@ -248,12 +248,15 @@ const handleTimeline = (index, row: RowData) => {
 const tableData = ref<RowData[]>([])
 
 const fetchData = () => {
+	// 1.建議寫法
   // getBomlistReq(type.value)
   //   .then((res) => {
   //     const { data } = res
   //     tableData.value = data
   //   })
   //   .catch((err) => console.log(err))
+	
+	// 2.較不建議寫法
   axios
     .get(`boms/status/${type.value}`)
     .then(({ data }) => {
