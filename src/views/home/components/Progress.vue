@@ -5,7 +5,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed, ref, onMounted, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 const props = defineProps({
   // 百分比，必填 0-100
   percentage: {

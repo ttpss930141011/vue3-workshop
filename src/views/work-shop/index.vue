@@ -49,9 +49,11 @@
       </el-row>
     </el-card>
   </el-card>
+  <Icon />
 </template>
 
 <script setup lang="ts">
+import Icon from '@/components/shared/Icon/index.vue'
 const getResonse = ref('')
 const postResonse = ref('')
 const putResonse = ref('')

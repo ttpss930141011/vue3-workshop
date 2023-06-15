@@ -178,7 +178,7 @@ export default {
  */
 
 export function getDateDiff(startTime: Date, endTime: Date) {
-  let timeOff = endTime.getTime() - startTime.getTime() // 相差時間戳（毫秒數）
+  const timeOff = endTime.getTime() - startTime.getTime() // 相差時間戳（毫秒數）
   return convertTimeOffToString(timeOff)
 }
 /**
@@ -186,20 +186,20 @@ export function getDateDiff(startTime: Date, endTime: Date) {
  * @param {Number} timeOff（毫秒數）
  * @returns*/
 export function convertTimeOffToString(timeOff: number) {
-  let timeSecond = 1000
-  let timeMinute = 1000 * 60
-  let timeHour = 1000 * 3600
-  let timeDay = 1000 * 3600 * 24
-  let timeYear = 1000 * 3600 * 24 * 365
+  const timeSecond = 1000
+  const timeMinute = 1000 * 60
+  const timeHour = 1000 * 3600
+  const timeDay = 1000 * 3600 * 24
+  const timeYear = 1000 * 3600 * 24 * 365
   if (timeOff / timeYear >= 1) {
-    return Math.round(timeOff / timeYear) + '年' + Math.round((timeOff % timeYear) / timeDay) + '天'
+    return `${Math.round(timeOff / timeYear)  }年${  Math.round((timeOff % timeYear) / timeDay)  }天`
   } else if (timeOff / timeDay >= 1) {
-    return Math.round(timeOff / timeDay) + '天' + Math.round((timeOff % timeDay) / timeHour) + '小時'
+    return `${Math.round(timeOff / timeDay)  }天${  Math.round((timeOff % timeDay) / timeHour)  }小時`
   } else if (timeOff / timeHour >= 1) {
-    return Math.round(timeOff / timeHour) + '小時' + Math.round((timeOff % timeHour) / timeMinute) + '分'
+    return `${Math.round(timeOff / timeHour)  }小時${  Math.round((timeOff % timeHour) / timeMinute)  }分`
   } else if (timeOff / timeMinute >= 1) {
-    return Math.round(timeOff / timeMinute) + '分' + Math.round((timeOff % timeMinute) / timeSecond) + '秒'
+    return `${Math.round(timeOff / timeMinute)  }分${  Math.round((timeOff % timeMinute) / timeSecond)  }秒`
   } else {
-    return Math.round(timeOff / timeSecond) + '秒'
+    return `${Math.round(timeOff / timeSecond)  }秒`
   }
 }

@@ -2,9 +2,9 @@
   <el-dialog v-model="dialogShow" :title="bomNo" :before-close="dialogClose" top="5vh">
     <el-form
       ref="formRef"
+      v-loading="isUploading ? { text: uploadStatus } : false"
       :model="formData"
       :rules="formRules"
-      v-loading="isUploading ? { text: uploadStatus } : false"
     >
       <el-form-item v-if="isStatusNew" label="Correlation:">
         <el-checkbox v-model="isCorrelation" label="Correlation" border :disabled="isUploading" />
