@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-const msg = ref('commit 2')
+const msg = ref('feature/main-ahead-of-branch-example')
 </script>
 
 <style scoped lang="scss"></style>
